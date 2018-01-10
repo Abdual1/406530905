@@ -24,15 +24,18 @@ if(extract($_POST)){
             echo "height=$height<br>";
             echo "weight=$weight<br>";
             echo "BMI=".$weight/$height/$height."<br>";
+            
             $filename=$_FILES["file"]["name"];
-            move_uploaded_file($_FILES["file"]["tmp_name"],"upload/$filename");
-    
             $sub=substr($_FILES["file"]["type"],0,5);
-            if($sub=="image"){            
+            if($sub=="image"){
+                move_uploaded_file($_FILES["file"]["tmp_name"],"upload/$filename");            
                 echo '<img src="upload/'.$filename.'"/>';
             }else{
                echo"wrong type";
             }     
+           
+    
+            
         }
     }
 }
