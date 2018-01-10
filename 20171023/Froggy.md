@@ -32,6 +32,6 @@
 22. align-content:flex-end;
 23. flex-direction:column-reverse;
     align-content:center;
-24. lex-flow:column-reverse wrap-reverse;
+24. flex-flow:column-reverse wrap-reverse;
     align-content:space-between;
     justify-content:center;
